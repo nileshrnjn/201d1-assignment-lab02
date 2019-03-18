@@ -28,6 +28,9 @@ var answers = {
 /* Main logic starts here*/
 alert("Welcome to my webpage!");
 var userName = getUserName();
+alert(Mainlogic());
+
+function Mainlogic() {
 while ((userName === null || userName === "") &&  counter1 < 3) {
     counter1++;
     alert("Seems you hit a snag. No problem, try again!");
@@ -66,9 +69,10 @@ if (userName === null ||  userName === "") {
             }
         }
     }          
-    alert("You correctly guessed " + correctAnsCounter + " out of " + questions.length + ". Thanks for playing the game!");
+   var Result = "You correctly guessed " + correctAnsCounter + " out of " + questions.length + ". Thanks for playing the game!";
+   return Result;
 }
- 
+}
 /* Function declarations */
 function getUserName() {
     var name = prompt("What's your name?")
